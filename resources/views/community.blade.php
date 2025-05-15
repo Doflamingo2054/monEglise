@@ -10,14 +10,68 @@
 <body>
     @include('partials.header')
     <main>
-        COMMUNAUTE ICI
         <section class="container">
-            EXEMPLE DE CONTENU
+            <div class="posts">
+                <article>
+                    <div class="author">
+                        <img src="{{ asset('images/user.png') }}" alt="User Avatar" class="avatar">
+                        <div class="author-info">
+                            <h3>Nom de l'utilisateur</h3>
+                            <p>Il y a 2 heures</p>
+                        </div>
+                    </div>
+                    <div class="post-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus pariatur maxime reprehenderit, atque a tempora accusantium asperiores magnam doloribus quas numquam libero. Deleniti, praesentium aliquam accusamus ex repudiandae molestias quae?
+                    </div>
+                    <div class="post-actions">
+                        <a href="#">
+                            <i class='bx bx-like'></i>
+                            Commentaires (10)
+                        </a>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
     @include('partials.footer')
     <style>
-        CSS ICI
+        .posts {
+            margin-top: 20px;
+        }
+        .posts article {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .posts {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .post-text {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .post-actions a {
+            text-decoration: none;
+            color: var(--primary-color);
+        }
+
+        .post-actions a:hover {
+            color: var(--accent-color);
+        }
     </style>
 </body>
 </html>
