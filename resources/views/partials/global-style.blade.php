@@ -34,7 +34,8 @@
     }
 
     main {
-        padding: 40px 0
+        padding: 40px 0;
+        min-height: 100vh;
     }
 
     a {

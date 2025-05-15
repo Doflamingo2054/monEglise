@@ -24,6 +24,10 @@ Route::get('/multimedia', function () {
     return view('multimedia');
 })->name('multimedia');
 
+Route::get('/create-post', function () {
+    return view('create-post');
+})->name('create-post');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 });//->middleware(['auth', 'verified'])->name('dashboard');
@@ -57,5 +61,15 @@ Route::get('/rss-videos', function () {
         return response()->json(['error' => 'Erreur serveur : ' . $e->getMessage()], 500);
     }
 });
+
+Route::post('/create-post', function () {
+    // Handle the form submission for creating a post
+    // You can use the request() helper to access the form data
+    $data = request()->all();
+
+    // Process the data and save it to the database or perform any other action
+
+    return redirect()->route('dashboard')->with('success', 'Post created successfully!');
+})->name('create-post.submit');
 
 require __DIR__.'/auth.php';
