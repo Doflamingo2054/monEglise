@@ -8,6 +8,7 @@
     <title>Donation</title>
 </head>
 <body>
+    <p> YASMEEN NAY</p>
     @include('partials.header')
     <main>
         DONATION ICI
