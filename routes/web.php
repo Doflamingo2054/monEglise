@@ -8,6 +8,11 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/search', function () {
+    // You can return a view or controller here
+    return view('search');
+})->name('search');
+
 Route::get('/community', function () {
     return view('community');
 })->name('community');
