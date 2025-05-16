@@ -1,36 +1,139 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\MultimediaController;
+use App\Http\Controllers\PrayerController;
+use App\Http\Controllers\TestimonyController;
+use App\Http\Controllers\CommentController;
 
-Route::get('/', function () {
-    return view('home');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
 
-Route::get('/community', function () {
-    return view('community');
-});
+// Page d'accueil publique
+Route::get('/', fn() => view('home'))->name('home');
 
-Route::get('/donation', function () {
-    return view('donation');
-});
 
-Route::get('/meditation', function () {
-    return view('meditation');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});//->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/admin', function () {
-    return view('admin');
-});//->middleware(['auth', 'verified'])->name('admin');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
+// Auth (login, register, reset…)
 require __DIR__.'/auth.php';
+
+// -----------------------------------------------------------------------------
+// TABLEAUX DE BORD
+// -----------------------------------------------------------------------------
+
+// Tableau de bord membre
+Route::middleware('auth')
+     ->get('/dashboard', [MemberController::class, 'index'])
+     ->name('dashboard');
+
+// Tableau de bord admin
+Route::middleware(['auth','admin'])
+     ->prefix('admin')->name('admin.')
+     ->get('/dashboard', [DashboardController::class, 'index'])
+     ->name('dashboard');
+
+// -----------------------------------------------------------------------------
+// ÉVÉNEMENTS
+// -----------------------------------------------------------------------------
+
+// Public : voir l’agenda (liste)
+Route::get('events', [EventController::class, 'index'])
+     ->name('events.index');
+
+// Admin : CRUD complet + calendrier
+Route::middleware(['auth','admin'])
+     ->prefix('admin')->name('admin.')
+     ->group(function () {
+         // Calendrier interactif
+         Route::get('events/calendar', [EventController::class, 'index'])
+              ->name('events.calendar');
+         // Resource (index, create, store, show, edit, update, destroy)
+         Route::resource('events', EventController::class);
+     });
+
+// -----------------------------------------------------------------------------
+// MULTIMÉDIA
+// -----------------------------------------------------------------------------
+
+// Public : voir les vidéos
+Route::get('multimedia', [MultimediaController::class, 'index'])
+     ->name('multimedia.index');
+
+// -----------------------------------------------------------------------------
+// PRIÈRES
+// -----------------------------------------------------------------------------
+
+// Public : voir les prières publiées
+Route::get('prayers', [PrayerController::class, 'publicIndex'])
+     ->name('prayers.index');
+
+// Membre (auth) : création
+Route::middleware('auth')
+     ->group(function () {
+         Route::get('prayers/create', [PrayerController::class, 'create'])
+              ->name('prayers.create');
+         Route::post('prayers', [PrayerController::class, 'store'])
+              ->name('prayers.store');
+     });
+
+// Admin : gestion (validation/rejet/suppression)
+Route::middleware(['auth','admin'])
+     ->prefix('admin')->name('admin.')
+     ->group(function () {
+         Route::get('prayers', [PrayerController::class, 'adminIndex'])
+              ->name('prayers.index');
+         Route::post('prayers/{prayer}/publish', [PrayerController::class, 'publish'])
+              ->name('prayers.publish');
+         Route::post('prayers/{prayer}/reject', [PrayerController::class, 'reject'])
+              ->name('prayers.reject');
+         Route::delete('prayers/{prayer}', [PrayerController::class, 'destroy'])
+              ->name('prayers.destroy');
+     });
+
+// -----------------------------------------------------------------------------
+// TÉMOIGNAGES
+// -----------------------------------------------------------------------------
+
+// Public : voir les témoignages publiés
+Route::get('testimonies', [TestimonyController::class, 'publicIndex'])
+     ->name('testimonies.index');
+
+// Membre (auth) : création
+Route::middleware('auth')
+     ->group(function () {
+         Route::get('testimonies/create', [TestimonyController::class, 'create'])
+              ->name('testimonies.create');
+         Route::post('testimonies', [TestimonyController::class, 'store'])
+              ->name('testimonies.store');
+     });
+
+// Admin : gestion (validation/rejet/suppression)
+Route::middleware(['auth','admin'])
+     ->prefix('admin')->name('admin.')
+     ->group(function () {
+         Route::get('testimonies', [TestimonyController::class, 'adminIndex'])
+              ->name('testimonies.index');
+         Route::post('testimonies/{testimony}/publish', [TestimonyController::class, 'publish'])
+              ->name('testimonies.publish');
+         Route::post('testimonies/{testimony}/reject', [TestimonyController::class, 'reject'])
+              ->name('testimonies.reject');
+         Route::delete('testimonies/{testimony}', [TestimonyController::class, 'destroy'])
+              ->name('testimonies.destroy');
+     });
+
+// -----------------------------------------------------------------------------
+// COMMENTAIRES (AJAX)
+// -----------------------------------------------------------------------------
+
+Route::middleware('auth')
+     ->group(function () {
+         Route::post('comments', [CommentController::class, 'store'])
+              ->name('comments.store');
+         Route::delete('comments/{comment}', [CommentController::class, 'destroy'])
+              ->name('comments.destroy');
+     });
