@@ -8,6 +8,11 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/search', function () {
+    // You can return a view or controller here
+    return view('search');
+})->name('search');
+
 Route::get('/community', function () {
     return view('community');
 })->name('community');
@@ -57,5 +62,9 @@ Route::get('/rss-videos', function () {
         return response()->json(['error' => 'Erreur serveur : ' . $e->getMessage()], 500);
     }
 });
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
 
 require __DIR__.'/auth.php';
