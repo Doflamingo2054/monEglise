@@ -15,8 +15,29 @@ use App\Http\Controllers\CommentController;
 |--------------------------------------------------------------------------
 */
 
-// Page d'accueil publique
-Route::get('/', fn() => view('home'))->name('home');
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+
+Route::get('/community', function () {
+    return view('community');
+})->name('community');
+
+Route::get('/donation', function () {
+    return view('donation');
+})->name('donation');
+
+Route::get('/meditation', function () {
+    return view('meditation');
+})->name('meditation');
+
+Route::get('/multimedia', function () {
+    return view('multimedia');
+})->name('multimedia');
+
+Route::get('/create-post', function () {
+    return view('create-post');
+})->name('create-post');
 
 
 // Auth (login, register, reset…)

@@ -9,7 +9,7 @@ use Laravel\Fortify\Contracts\{
     RegisterViewResponse
 };
 
-class AppServiceProvider extends ServiceProvider
+class RouteServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
