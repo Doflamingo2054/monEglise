@@ -36,9 +36,11 @@ Route::get('/meditation', function () {
     return view('meditation');
 })->name('meditation');
 
-Route::get('/multimedia', function () {
-    return view('multimedia');
-})->name('multimedia');
+// Route::get('/multimedia', function () {
+//     return view('multimedia');
+// })->name('multimedia');
+Route::get('multimedia', [MultimediaController::class, 'index'])
+     ->name('multimedia.index');
 
 Route::get('/create-post', function () {
     return view('create-post');

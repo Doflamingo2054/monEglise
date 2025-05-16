@@ -33,7 +33,7 @@
                 <li><a href="{{ route('home') }}"><i class='bx bx-home'></i> Accueil</a></li>
                 <li><a href="{{ route('community') }}"><i class='bx bx-group'></i> Communauté</a></li>
                 <li><a href="{{ route('meditation') }}"><i class='bx bx-book-open'></i> Méditation</a></li>
-                <li><a href="{{ route('multimedia') }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
+                <li><a href="{{ route('multimedia.index') }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
             </ul>
         </nav>
         <div class="footer-contact">
