@@ -13,9 +13,30 @@
         <nav class="mobile-hidden" aria-label="Navigation principale">
             <ul>
                 <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}"><i class='bx bx-home'></i> Accueil</a></li>
-                <li><a href="{{ route('community') }}" class="{{ request()->routeIs('community') ? 'active' : '' }}"><i class='bx bx-group'></i> Communauté</a></li>
-                <li><a href="{{ route('meditation') }}" class="{{ request()->routeIs('meditation') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Méditation</a></li>
-                <li><a href="{{ route('multimedia') }}" class="{{ request()->routeIs('multimedia') ? 'active' : '' }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
+                <li><a href="{{ route('meditation') }}" class="{{ request()->routeIs('meditation') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Agenda</a></li>
+                <li class="dropdown">
+                    <a href="{{ route('community') }}" class="{{ request()->routeIs('community*') ? 'active' : '' }}">
+                        <i class='bx bx-group'></i> Communauté <i class='bx bx-chevron-down'></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" class="{{ request()->routeIs('community') ? 'active' : '' }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
+                        <li>
+                            <a href="#" class="{{ request()->routeIs('community.members') ? 'active' : '' }}">
+                                <i class='bx bx-book'></i> Méditation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
+                                <i class='bx bx-church'></i> Prière
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
+                                <i class='bx bx-donate-heart'></i> Faire un don
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <div class="header-social">
@@ -192,6 +213,67 @@
         background: var(--accent-color);
         color: var(--secondary-color);
         outline: none;
+    }
+    /* Dropdown styles */
+    nav ul li.dropdown {
+        position: relative;
+    }
+
+    nav ul li .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 180px;
+        background: var(--header-gradient);
+        box-shadow: 0 4px 16px var(--shadow-color);
+        border-radius: 0 0 10px 10px;
+        z-index: 10;
+        padding: 8px 0;
+    }
+
+    nav ul li.dropdown:hover > .dropdown-menu,
+    nav ul li.dropdown:focus-within > .dropdown-menu {
+        display: block;
+    }
+
+    nav ul li .dropdown-menu li {
+        width: 100%;
+        display: block;
+    }
+
+    nav ul li .dropdown-menu a {
+        color: var(--accent-color);
+        padding: 10px 18px;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        display: block;
+        transition: background 0.2s, color 0.2s;
+    }
+
+    nav ul li .dropdown-menu a:hover,
+    nav ul li .dropdown-menu a.active {
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+        nav ul li .dropdown-menu {
+            position: static;
+            box-shadow: none;
+            background: none;
+            border-radius: 0;
+            padding: 0;
+            display: none;
+        }
+        nav ul li.dropdown.open > .dropdown-menu {
+            display: block;
+        }
+        nav ul li .dropdown-menu a {
+            padding-left: 32px;
+        }
     }
 
     @media (max-width: 1100px) {

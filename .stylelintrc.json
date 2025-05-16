@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard",
+  "ignoreAtRules": [
+    "tailwind",
+    "apply",
+    "variants",
+    "responsive",
+    "screen",
+    "layer"
+  ]
+}
