@@ -3,37 +3,22 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
-use Laravel\Fortify\Contracts\{
-    LoginViewResponse,
-    RegisterViewResponse
-};
 
-class RouteServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
-     *
-     * @return void
      */
-    public function register()
+    public function register(): void
     {
-        $this->app->bind(LoginViewResponse::class, function () {
-            return response()->view('auth.login');
-        });
-
-        $this->app->bind(RegisterViewResponse::class, function () {
-            return response()->view('auth.register');
-        });
+        //
     }
 
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        Schema::defaultStringLength(191); // Fixe la longueur maximale des clés
+        //
     }
 }
