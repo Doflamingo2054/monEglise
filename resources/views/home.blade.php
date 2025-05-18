@@ -1,18 +1,14 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.global-style')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Accueil</title>
 </head>
 <body>
     @include('partials.header')
-    <main>
+    <main class="container-lg">
         <!-- Alert Widget -->
         <div class="container mb-4">
             <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -193,8 +189,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-=======
-@extends('layouts.app')
 
 @section('content')
 <div class="bg-gradient-to-r from-blue-500 to-indigo-600 py-20">
@@ -244,5 +238,3 @@
   </div>
 </div>
 @endsection
-
->>>>>>> feature/new
