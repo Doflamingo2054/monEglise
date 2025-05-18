@@ -8,13 +8,14 @@
 
   <!-- CSS compilé -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  @include('partials.global-style')
 
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body class="font-sans antialiased bg-gray-100 text-gray-900">
   <!-- Barre de navigation -->
-  @include('layouts.navigation')
+  @include('partials.header')
 
   <!-- Affichage des messages flash -->
   @if(session('success'))
@@ -26,9 +27,11 @@
   @endif
 
   <!-- Contenu principal -->
-  <main class="container mx-auto py-8">
+  <main class="container-lg container-lg py-8">
     @yield('content')
   </main>
+
+   @include('partials.footer')
 
   <!-- Scripts compilés -->
   <script src="{{ asset('js/app.js') }}" defer></script>

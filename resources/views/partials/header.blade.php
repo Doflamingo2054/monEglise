@@ -13,29 +13,39 @@
         <nav class="mobile-hidden" aria-label="Navigation principale">
             <ul>
                 <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}"><i class='bx bx-home'></i> Accueil</a></li>
-                <li><a href="{{ route('meditation') }}" class="{{ request()->routeIs('meditation') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Agenda</a></li>
+                <li><a href="{{ route('events.index') }}" class="{{ request()->routeIs('meditation') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Agenda</a></li>
                 <li class="dropdown">
                     <a href="{{ route('community') }}" class="{{ request()->routeIs('community*') ? 'active' : '' }}">
                         <i class='bx bx-group'></i> Communauté <i class='bx bx-chevron-down'></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" class="{{ request()->routeIs('community') ? 'active' : '' }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
+                        <li><a href="{{ route('multimedia.index') }}" class="{{ request()->routeIs('community') ? 'active' : '' }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
                         <li>
-                            <a href="#" class="{{ request()->routeIs('community.members') ? 'active' : '' }}">
+                            <a href="{{ route('meditation') }}" class="{{ request()->routeIs('community.members') ? 'active' : '' }}">
                                 <i class='bx bx-book'></i> Méditation
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
+                            <a href="{{ route('prayers.index') }}" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
                                 <i class='bx bx-church'></i> Prière
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
+                            <a href="{{ route('register') }}" class="{{ request()->routeIs('register') ? 'active' : '' }}">
+                                <i class='bx bx-user-plus'></i> Rejoindre
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('donation') }}" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
                                 <i class='bx bx-donate-heart'></i> Faire un don
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="{{ route('login') }}" class="{{ request()->routeIs('login') ? 'active' : '' }}">
+                        <i class='bx bx-log-in'></i> Connexion
+                    </a>
                 </li>
             </ul>
         </nav>
