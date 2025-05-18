@@ -32,6 +32,10 @@
                 </article>
             </div>
         </section>
+        <a id="create-post-button" href="{{ route('create-post') }}" class="btn btn-primary">
+            <i class='bx bxs-plus-circle'></i>
+            Créer un post
+        </a>
     </main>
     @include('partials.footer')
     <style>
@@ -71,6 +75,34 @@
 
         .post-actions a:hover {
             color: var(--accent-color);
+        }
+
+        #create-post-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px 20px;
+            border: solid 2px var(--background-color);
+            text-decoration: none;
+            display: flex;
+            gap: 4px;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #create-post-button:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--primary-color);
         }
     </style>
 </body>
