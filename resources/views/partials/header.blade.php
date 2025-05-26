@@ -13,40 +13,56 @@
         <nav class="mobile-hidden" aria-label="Navigation principale">
             <ul>
                 <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}"><i class='bx bx-home'></i> Accueil</a></li>
-                <li><a href="{{ route('events.index') }}" class="{{ request()->routeIs('meditation') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Agenda</a></li>
+                <li><a href="{{ route('events.index') }}" class="{{ request()->routeIs('events.index') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Agenda</a></li>
                 <li class="dropdown">
                     <a href="{{ route('community') }}" class="{{ request()->routeIs('community*') ? 'active' : '' }}">
                         <i class='bx bx-group'></i> Communauté <i class='bx bx-chevron-down'></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ route('multimedia.index') }}" class="{{ request()->routeIs('community') ? 'active' : '' }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
+                        <li><a href="{{ route('multimedia.index') }}" class="{{ request()->routeIs('multimedia.index') ? 'active' : '' }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
                         <li>
-                            <a href="{{ route('meditation') }}" class="{{ request()->routeIs('community.members') ? 'active' : '' }}">
+                            <a href="{{ route('meditation') }}" class="{{ request()->routeIs('meditation') ? 'active' : '' }}">
                                 <i class='bx bx-book'></i> Méditation
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('prayers.index') }}" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
+                            <a href="{{ route('prayers.index') }}" class="{{ request()->routeIs('prayers.index') ? 'active' : '' }}">
                                 <i class='bx bx-church'></i> Prière
                             </a>
                         </li>
+                        @guest
                         <li>
                             <a href="{{ route('register') }}" class="{{ request()->routeIs('register') ? 'active' : '' }}">
                                 <i class='bx bx-user-plus'></i> Rejoindre
                             </a>
                         </li>
+                        @endguest
                         <li>
-                            <a href="{{ route('donation') }}" class="{{ request()->routeIs('community.events') ? 'active' : '' }}">
+                            <a href="{{ route('donation') }}" class="{{ request()->routeIs('donation') ? 'active' : '' }}">
                                 <i class='bx bx-donate-heart'></i> Faire un don
                             </a>
                         </li>
                     </ul>
                 </li>
+                @auth
+                <li>
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                        class="{{ request()->routeIs('logout') ? 'active' : '' }}">
+                        <i class='bx bx-log-out'></i> Déconnexion
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </li>
+                @else
                 <li>
                     <a href="{{ route('login') }}" class="{{ request()->routeIs('login') ? 'active' : '' }}">
                         <i class='bx bx-log-in'></i> Connexion
                     </a>
                 </li>
+                @endauth
+
             </ul>
         </nav>
         <div class="header-social">
@@ -81,7 +97,7 @@
         box-shadow: 0 2px 8px var(--shadow-color);
     }
 
-    header > .container {
+    header>.container {
         max-width: 1300px;
         margin: 0 auto;
         padding: 0 24px;
@@ -121,7 +137,7 @@
         font-weight: 700;
         color: var(--accent-color);
         letter-spacing: 1px;
-        text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     .header-search {
@@ -133,6 +149,7 @@
         padding: 2px 8px;
         margin: 0 12px;
     }
+
     .header-search input {
         border: none;
         outline: none;
@@ -144,9 +161,11 @@
         width: 120px;
         transition: width 0.3s;
     }
+
     .header-search input:focus {
         width: 180px;
     }
+
     .header-search button {
         background: none;
         border: none;
@@ -198,11 +217,13 @@
         display: flex;
         gap: 10px;
     }
+
     .header-social a {
         color: var(--accent-color);
         font-size: 1.4rem;
         transition: color 0.2s;
     }
+
     .header-social a:hover {
         color: #ffe066;
     }
@@ -219,11 +240,14 @@
         transition: background 0.2s, color 0.2s;
         margin-left: 10px;
     }
-    .menu-toggle:hover, .menu-toggle:focus {
+
+    .menu-toggle:hover,
+    .menu-toggle:focus {
         background: var(--accent-color);
         color: var(--secondary-color);
         outline: none;
     }
+
     /* Dropdown styles */
     nav ul li.dropdown {
         position: relative;
@@ -242,8 +266,8 @@
         padding: 8px 0;
     }
 
-    nav ul li.dropdown:hover > .dropdown-menu,
-    nav ul li.dropdown:focus-within > .dropdown-menu {
+    nav ul li.dropdown:hover>.dropdown-menu,
+    nav ul li.dropdown:focus-within>.dropdown-menu {
         display: block;
     }
 
@@ -278,45 +302,64 @@
             padding: 0;
             display: none;
         }
-        nav ul li.dropdown.open > .dropdown-menu {
+
+        nav ul li.dropdown.open>.dropdown-menu {
             display: block;
         }
+
         nav ul li .dropdown-menu a {
             padding-left: 32px;
         }
     }
 
     @media (max-width: 1100px) {
-        .header-search { display: none; }
-        nav ul { gap: 16px; }
-        .church-name { font-size: 1.1rem; }
+        .header-search {
+            display: none;
+        }
+
+        nav ul {
+            gap: 16px;
+        }
+
+        .church-name {
+            font-size: 1.1rem;
+        }
     }
+
     @media (max-width: 900px) {
-        header > .container {
+        header>.container {
             padding: 0 10px;
             gap: 8px;
         }
-        .header-social { display: none; }
+
+        .header-social {
+            display: none;
+        }
     }
+
     @media (max-width: 768px) {
-        header > .container {
+        header>.container {
             flex-direction: column;
             align-items: stretch;
             height: auto;
             padding: 0 8px;
             gap: 0;
         }
+
         .logo-box {
             justify-content: space-between;
             width: 100%;
             height: 70px;
         }
+
         .menu-toggle {
             display: block;
         }
+
         nav {
             width: 100%;
         }
+
         nav ul {
             flex-direction: column;
             gap: 0;
@@ -326,9 +369,11 @@
             border-radius: 0 0 12px 12px;
             margin-top: 0;
         }
+
         nav ul li {
             width: 100%;
         }
+
         nav ul li a {
             display: block;
             width: 100%;
@@ -336,9 +381,11 @@
             font-size: 1.08rem;
             border-bottom: 1px solid var(--secondary-color);
         }
+
         nav ul li:last-child a {
             border-bottom: none;
         }
+
         nav.mobile-hidden {
             height: 0;
             overflow: hidden;
