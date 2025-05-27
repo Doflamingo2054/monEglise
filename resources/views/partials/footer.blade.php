@@ -10,6 +10,11 @@
                 <ul>
                     <li><i class='bx bx-calendar'></i> Dimanche : 10h - 12h</li>
                     <li><i class='bx bx-calendar'></i> Mercredi : 19h - 20h30</li>
+                    <li>
+                        <a href="{{ route('donation') }}" class="{{ request()->routeIs('donation') ? 'active' : '' }}">
+                            <i class='bx bx-donate-heart'></i> Faire un don
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="footer-widget">
@@ -93,7 +98,7 @@
         font-weight: 700;
         color: #f9f9f9;
         letter-spacing: 1px;
-        text-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
     }
 
     .footer-widgets {
@@ -101,10 +106,12 @@
         gap: 32px;
         flex-wrap: wrap;
     }
+
     .footer-widget {
         min-width: 200px;
         margin-bottom: 12px;
     }
+
     .footer-widget h4 {
         font-size: 1.08rem;
         font-weight: 600;
@@ -114,6 +121,7 @@
         align-items: center;
         gap: 6px;
     }
+
     .footer-widget ul {
         list-style: none;
         padding: 0;
@@ -121,17 +129,20 @@
         color: #f9f9f9;
         font-size: 0.98rem;
     }
+
     .footer-widget li {
         margin-bottom: 4px;
         display: flex;
         align-items: center;
         gap: 6px;
     }
+
     .newsletter-form {
         display: flex;
         gap: 6px;
         margin-top: 4px;
     }
+
     .newsletter-form input {
         border: none;
         border-radius: 18px;
@@ -141,6 +152,7 @@
         width: 120px;
         color: #333;
     }
+
     .newsletter-form button {
         background: #a3b18a;
         border: none;
@@ -151,20 +163,24 @@
         cursor: pointer;
         transition: background 0.2s;
     }
+
     .newsletter-form button:hover {
         background: #ffe066;
         color: #3a5a40;
     }
+
     .footer-social {
         display: flex;
         gap: 10px;
         margin-top: 4px;
     }
+
     .footer-social a {
         color: #f9f9f9;
         font-size: 1.4rem;
         transition: color 0.2s;
     }
+
     .footer-social a:hover {
         color: #ffe066;
     }
@@ -177,6 +193,7 @@
         flex-direction: column;
         gap: 8px;
     }
+
     .footer-nav a {
         color: #f9f9f9;
         text-decoration: none;
@@ -186,6 +203,7 @@
         gap: 6px;
         transition: color 0.2s;
     }
+
     .footer-nav a:hover,
     .footer-nav a:focus {
         color: #ffe066;
@@ -197,17 +215,20 @@
         line-height: 1.7;
         margin-top: 12px;
     }
+
     .footer-contact i {
         margin-right: 6px;
         color: #ffe066;
         font-size: 1.1em;
         vertical-align: middle;
     }
+
     .footer-contact a {
         color: #f9f9f9;
         text-decoration: underline;
         transition: color 0.2s;
     }
+
     .footer-contact a:hover {
         color: #ffe066;
     }
@@ -228,6 +249,7 @@
             gap: 18px;
             padding: 0 10px 16px 10px;
         }
+
         .footer-widgets {
             flex-direction: column;
             gap: 12px;
