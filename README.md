@@ -1,64 +1,71 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Site web Mouvement de Réveil Méthodiste
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ce projet est une application web pour l'église Mouvement de Réveil Méthodiste. Ce document vous décriras comment le tester en ligne ou sur votre machine
 
-## About Laravel
+Membres de l'équipe :
+- THEA Guy Roger
+- YAO Kossia Bénédicte
+- N'DOLI Yasmeen
+- KOUAO Amah Esther
+- GODJAN Koutouan Lucien
+- SANOGO Zoumana
+- KUSI Appiah
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tester le projet en ligne
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Ouvrez un navigateur et entrez l'adresse suivante : [guymaster.tech:8000](guymaster.tech:8000)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Tester le projet sur votre machine
 
-## Learning Laravel
+### Préréquis
+- Avoir git installé
+- Avoir PHP et Laravel installé
+- Avoir NodeJS installé
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 1 - Clonnez ce repository
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Ouvrez un terminal et tapez :
 
-## Laravel Sponsors
+```bash
+git clone https://github.com/Doflamingo2054/monEglise.git
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Ouvrez ensuite un terminal à la racine du projet pour les futures commandes.
+### 2 - Configurez les variables d'environnement
 
-### Premium Partners
+A la racine du projet, créez un fichier `.env` et entrez-y le contenu du fichier `env.txt` reçu par mail.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### 3 - Installez les dépendances
 
-## Contributing
+Tapez la commande :
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+npm install
+```
 
-## Code of Conduct
+### 4 - Lancez le projet
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Tapez la commande :
 
-## Security Vulnerabilities
+```bash
+composer run dev
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 5 - Accédez à l'application
 
-## License
+Ouvrez un navigateur et entrez l'adresse : [localhost:8000](localhost:8000)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Identifiants de connexion
+
+Le site dispose d'un système d'authentification avec 3 types d'accès :
+
+- **Invité** : Les personnes n'ayant pas de compte. Elles peuvent consulter les informations
+- **Membre** : Les personnes ayant un compte. Elles peuvent consulter les informations et ajouter du contenu communautaire (Ex: Prière)
+- **Admin** : Les administrateurs de l'application. Ils peuvent consulter et modifier et supprimer les informations.
+
+Voici quelques comptes que vous pouvez utiliser pour vos tests :
+
+| Type de compte | Email              | Mot de passe |
+| -------------- | ------------------ | ------------ |
+| Membre         | member@example.com | member       |
+| Admin          | admin@example.com  | admin        |
