@@ -3,7 +3,7 @@
         <div class="logo-box">
             <a href="{{ route('home') }}" class="logo-link" aria-label="Accueil">
                 <img src="{{ asset('logo.jpg') }}" alt="Logo de l'église" class="logo">
-                <span class="church-name">Église Espoir & Lumière</span>
+                <span class="church-name">Mouvement de Réveil Méthodiste</span>
             </a>
         </div>
         <form class="header-search" action="{{ route('search') }}" method="GET">
@@ -15,16 +15,16 @@
                 <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}"><i class='bx bx-home'></i> Accueil</a></li>
                 <li><a href="{{ route('events.index') }}" class="{{ request()->routeIs('events.index') ? 'active' : '' }}"><i class='bx bx-book-open'></i> Agenda</a></li>
                 <li class="dropdown">
-                    <a href="{{ route('community') }}" class="{{ request()->routeIs('community*') ? 'active' : '' }}">
+                    <a class="{{ request()->routeIs('community*') ? 'active' : '' }}">
                         <i class='bx bx-group'></i> Communauté <i class='bx bx-chevron-down'></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="{{ route('multimedia.index') }}" class="{{ request()->routeIs('multimedia.index') ? 'active' : '' }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
-                        <li>
+                        <!-- <li>
                             <a href="{{ route('meditation') }}" class="{{ request()->routeIs('meditation') ? 'active' : '' }}">
                                 <i class='bx bx-book'></i> Méditation
                             </a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="{{ route('prayers.index') }}" class="{{ request()->routeIs('prayers.index') ? 'active' : '' }}">
                                 <i class='bx bx-church'></i> Prière

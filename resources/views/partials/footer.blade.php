@@ -2,7 +2,7 @@
     <div class="footer-container">
         <div class="footer-brand">
             <img src="{{ asset('logo.jpg') }}" alt="Logo de l'église" class="footer-logo">
-            <span class="footer-church-name">Église Espoir & Lumière</span>
+            <span class="footer-church-name">Mouvement de Réveil Méthodiste</span>
         </div>
         <div class="footer-widgets">
             <div class="footer-widget">

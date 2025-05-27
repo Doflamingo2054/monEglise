@@ -1250,9 +1250,6 @@ select {
 .to-indigo-600 {
   --tw-gradient-to: #4f46e5 var(--tw-gradient-to-position);
 }
-.fill-current {
-  fill: currentColor;
-}
 .fill-red-500 {
   fill: #ef4444;
 }
