@@ -58,7 +58,7 @@
         <span>&copy; {{ date('Y') }} Mouvement de Réveil Méthodiste. Tous droits réservés.</span>
         <p class="footer-credits">
             Site créé par
-            <a href="https://guymaster.tech/" target="_blank" rel="noopener" class="footer-link">Guy</a>,
+            <a href="https://www.linkedin.com/in/guy-roger-thea" target="_blank" rel="noopener" class="footer-link">Guy</a>,
             <a href="http://kpagclavel.github.io" target="_blank" rel="noopener" class="footer-link">SANOGO</a>,
             <a href="#" target="_blank" rel="noopener" class="footer-link">Yasmine</a>,
             <a href="https://www.linkedin.com/in/appiah-moise-belveder-kusi/" target="_blank" rel="noopener" class="footer-link">Kusi</a>,
