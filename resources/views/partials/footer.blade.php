@@ -63,7 +63,7 @@
     @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 
     footer {
-        background: #3a5a40;
+        background: #493BA2;
         color: #f9f9f9;
         padding-top: 32px;
         box-shadow: 0 -2px 8px rgba(60, 60, 60, 0.08);
@@ -241,7 +241,6 @@
     .footer-bottom {
         text-align: center;
         padding: 12px 0;
-        background: rgba(58, 90, 64, 0.95);
         font-size: 0.97rem;
         color: #e0e0e0;
         border-top: 1px solid #a3b18a33;

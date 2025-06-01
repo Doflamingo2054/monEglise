@@ -6,10 +6,6 @@
                 <span class="church-name">Mouvement de Réveil Méthodiste</span>
             </a>
         </div>
-        <form class="header-search" action="{{ route('search') }}" method="GET">
-            <input type="text" name="q" placeholder="Rechercher..." aria-label="Recherche">
-            <button type="submit" aria-label="Rechercher"><i class='bx bx-search'></i></button>
-        </form>
         <nav class="mobile-hidden" aria-label="Navigation principale">
             <ul>
                 <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}"><i class='bx bx-home'></i> Accueil</a></li>
@@ -113,7 +109,7 @@
     }
 
     header {
-        background: #3a5a40;
+        background: #493BA2;
         color: var(--background-color);
         position: sticky;
         top: 0;
