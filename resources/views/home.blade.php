@@ -12,7 +12,7 @@
         <!-- Alert Widget -->
         <div class="container mb-4">
             <div class="alert alert-info alert-dismissible fade show" role="alert">
-                <strong>Nouveau :</strong> Retrouvez nos cultes en ligne chaque dimanche à 10h !
+                <strong>Nouveau :</strong> Retrouvez nos rencontres en ligne chaque dimanche après le culte !
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
             </div>
         </div>
@@ -24,26 +24,25 @@
                     <img src="{{ asset('faith.jpg') }}" alt="Église" class="img-fluid rounded shadow-lg">
                 </div>
                 <div class="col-md-6">
-                    <h2>Qui sommes-nous ?</h2>
-                    <p>
-                        Nous sommes une église accueillante, engagée à partager l'amour de Dieu et à servir notre communauté. 
-                        Rejoignez-nous pour nos cultes, nos activités et nos moments de partage.
+                    <h2 class="font-bold py-3 mb-5 fonth">Qui sommes-nous ?</h2>
+                    <p class="px-4 text-justify fontb">
+                        Le Mouvement de Réveil Méthodiste est un groupe de prière fervent qui cherche à intensifier sa mission à travers la prière, l’enseignement et la sanctification.
                     </p>
-                    <a href="/about" class="btn btn-outline-secondary mt-2">Découvrir notre histoire</a>
+                    <a href="/about" class="btn-outline-custom mt-5 font-bold mx-2">Découvrir notre histoire</a>
                 </div>
             </div>
         </section>
 
         <!-- Values Widget as Cards -->
-        <section class="values-section py-5 bg-light">
+        <section class="values-section py-5 bg-light fontb">
             <div class="container">
-                <h2 class="text-center mb-4">Nos valeurs</h2>
+                <h2 class="text-center mb-4 font-bold">Nos valeurs</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card h-100 text-center shadow-sm">
                             <div class="card-body">
                                 <i class="bi bi-heart-fill icon-lg text-danger mb-2"></i>
-                                <h5 class="card-title">Amour</h5>
+                                <h5 class="card-title font-bold">Amour</h5>
                                 <p class="card-text">Nous croyons que l'amour de Dieu transforme les vies et unit notre communauté.</p>
                             </div>
                         </div>
@@ -52,7 +51,7 @@
                         <div class="card h-100 text-center shadow-sm">
                             <div class="card-body">
                                 <i class="bi bi-people-fill icon-lg text-primary mb-2"></i>
-                                <h5 class="card-title">Partage</h5>
+                                <h5 class="card-title font-bold">Partage</h5>
                                 <p class="card-text">Le partage et la solidarité sont au cœur de nos actions et de notre mission.</p>
                             </div>
                         </div>
@@ -61,7 +60,7 @@
                         <div class="card h-100 text-center shadow-sm">
                             <div class="card-body">
                                 <i class="bi bi-lightbulb-fill icon-lg text-warning mb-2"></i>
-                                <h5 class="card-title">Espérance</h5>
+                                <h5 class="card-title font-bold">Espérance</h5>
                                 <p class="card-text">Nous portons un message d'espérance pour tous, quels que soient les défis.</p>
                             </div>
                         </div>
@@ -71,9 +70,9 @@
         </section>
 
         <!-- Events Section with Accordion -->
-        <section id="events" class="py-5">
+        <section id="events" class="py-5 fontb">
             <div class="container">
-                <h2 class="text-center mb-4">Nos prochains événements</h2>
+                <h2 class="text-center mb-4 font-bold">Nos prochains événements</h2>
                 <div class="accordion" id="eventsAccordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -119,9 +118,9 @@
         </section>
 
         <!-- Latest Sermons Widget as Cards -->
-        <section class="sermons-section py-5 bg-light">
+        <section class="sermons-section py-5 bg-light fontb">
             <div class="container">
-                <h2 class="text-center mb-4">Derniers messages</h2>
+                <h2 class="text-center mb-4 font-bold">Derniers messages</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">

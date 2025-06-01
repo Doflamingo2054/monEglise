@@ -76,7 +76,7 @@
                 aria-label="Blog">
                 <i class='bx bx-news'></i>
             </a>
-            <a href="https://www.youtube.com/@morevtv2258" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
+            <a href="https://www.youtube.com/@morevtv2258" aria-label="YouTube" target="_blank" rel="noopener"><i class='bx bxl-youtube'></i></a>
              {{-- **icône Dashboard visible en @auth --}}
             @auth
                 @if(auth()->check() && auth()->user()->role === 'admin')

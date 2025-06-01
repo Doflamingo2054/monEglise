@@ -54,8 +54,19 @@
             </p>
         </div>
     </div>
-    <div class="footer-bottom">
-        <span>&copy; {{ date('Y') }} Église Espoir & Lumière. Tous droits réservés.</span>
+        <div class="footer-bottom">
+        <span>&copy; {{ date('Y') }} Mouvement de Réveil Méthodiste. Tous droits réservés.</span>
+        <p class="footer-credits">
+            Site créé par
+            <a href="https://guymaster.tech/" target="_blank" rel="noopener" class="footer-link">Guy</a>,
+            <a href="http://kpagclavel.github.io" target="_blank" rel="noopener" class="footer-link">SANOGO</a>,
+            <a href="#" target="_blank" rel="noopener" class="footer-link">Yasmine</a>,
+            <a href="https://www.linkedin.com/in/appiah-moise-belveder-kusi/" target="_blank" rel="noopener" class="footer-link">Kusi</a>,
+            <a href="#" target="_blank" rel="noopener" class="footer-link">Benedicte</a>,
+            <a href="#" target="_blank" rel="noopener" class="footer-link">Godjan</a>,
+            <a href="https://www.linkedin.com/in/esther-kouao-990936263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" class="footer-link">Esther</a>,
+            sous la supervision de <strong>Dr Diako</strong>
+        </p>
     </div>
 </footer>
 
@@ -140,6 +151,24 @@
         display: flex;
         align-items: center;
         gap: 6px;
+    }
+
+    .footer-credits {
+        margin-top: 8px;
+        font-size: 0.98rem;
+        color: #ffe066;
+        text-align: center;
+        line-height: 1.6;
+    }
+    .footer-link {
+        color: rgba(249, 249, 249, 0.55);
+        text-decoration: none;
+        transition: color 0.2s;
+        margin: 0 2px;
+    }
+    .footer-link:hover {
+        color: #a3b18a;
+        text-decoration: underline solid;
     }
 
     .newsletter-form {
