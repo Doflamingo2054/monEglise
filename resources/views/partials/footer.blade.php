@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <span>&copy; {{ date('Y') }} Église Espoir & Lumière. Tous droits réservés.</span>
+        <span>&copy; {{ date('Y') }} Mouvement de Réveil Méthodiste. Tous droits réservés.</span>
     </div>
 </footer>
 

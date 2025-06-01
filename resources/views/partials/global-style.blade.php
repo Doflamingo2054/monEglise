@@ -54,5 +54,27 @@
         margin: 0 auto;
         padding: 0 20px;
     }
+    .fonth{
+        font-size: 48px;
+    }
+    .fontb{
+        font-size: 20px;
+    }
+    .btn-outline-custom {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid #3a5a40;
+    color: #3a5a40;
+    font-size: 18px;
+    border-radius: 0.375rem; /* 6px, équivalent de Tailwind rounded */
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-outline-custom:hover {
+        background-color: #3a5a40;
+        color: #fff;
+    }
+
 
 </style>
