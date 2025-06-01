@@ -42,7 +42,7 @@ document.addEventListener('click', async (e) => {
         ? `<button class="btn-delete-comment text-red-500" data-id="${comment.id}">×</button>`
         : ''}
     `;
-    list.append(div); // Ajouter en haut plutôt qu'en bas
+    list.prepend(div);
     textarea.value = '';
   }
 });
