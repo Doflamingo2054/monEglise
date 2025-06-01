@@ -120,7 +120,7 @@
         <!-- Latest Sermons Widget as Cards -->
         <section class="sermons-section py-5 bg-light fontb">
             <div class="container">
-                <h2 class="text-center mb-4">Derniers messages</h2>
+                <h2 class="text-center mb-4 font-bold">Derniers messages</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">
