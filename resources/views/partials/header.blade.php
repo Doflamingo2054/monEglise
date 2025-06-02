@@ -2,8 +2,8 @@
     <div class="container">
         <div class="logo-box">
             <a href="{{ route('home') }}" class="logo-link" aria-label="Accueil">
-                <img src="{{ asset('logo.jpg') }}" alt="Logo de l'église" class="logo">
-                <span class="church-name">Mouvement de Réveil Méthodiste</span>
+                <img src="{{ asset('logo.png') }}" alt="Logo de l'église" class="logo">
+                <span class="church-name">Mouvement de Réveil <br> Méthodiste</span>
             </a>
         </div>
         <nav class="mobile-hidden" aria-label="Navigation principale">
@@ -100,12 +100,7 @@
     @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 
     :root {
-        --primary-color: #3a5a40;
-        --secondary-color: #a3b18a;
-        --accent-color: #f9f9f9;
-        --background-color: #fff;
-        --shadow-color: rgba(60, 60, 60, 0.08);
-        --header-gradient: linear-gradient(90deg, #3a5a40 60%, #a3b18a 100%);
+        --header-gradient: linear-gradient(90deg, #493BA2 60%, #958FE0 100%);
     }
 
     header {
@@ -152,8 +147,7 @@
     }
 
     .church-name {
-        font-family: 'Segoe UI', 'Arial', sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 700;
         color: var(--accent-color);
         letter-spacing: 1px;
@@ -215,7 +209,6 @@
     nav ul li a {
         color: var(--accent-color);
         text-decoration: none;
-        font-size: 1.08rem;
         font-weight: 500;
         padding: 8px 0;
         border-bottom: 2px solid transparent;
@@ -299,7 +292,7 @@
     nav ul li .dropdown-menu a {
         color: var(--accent-color);
         padding: 10px 18px;
-        font-size: 1rem;
+        font-size: 14px;
         border: none;
         background: none;
         display: block;
@@ -362,7 +355,7 @@
             flex-direction: column;
             align-items: stretch;
             height: auto;
-            padding: 0 8px;
+            padding: 8px 16px;
             gap: 0;
         }
 
@@ -374,6 +367,8 @@
 
         .menu-toggle {
             display: block;
+            align-self: end;
+            margin-top: 8px;
         }
 
         nav {

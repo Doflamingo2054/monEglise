@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-container">
         <div class="footer-brand">
-            <img src="{{ asset('logo.jpg') }}" alt="Logo de l'église" class="footer-logo">
+            <img src="{{ asset('logo.png') }}" alt="Logo de l'église" class="footer-logo">
             <span class="footer-church-name">Mouvement de Réveil Méthodiste</span>
         </div>
         <div class="footer-widgets">
@@ -10,20 +10,15 @@
                 <ul>
                     <li><i class='bx bx-calendar'></i> Dimanche : 10h - 12h</li>
                     <li><i class='bx bx-calendar'></i> Mercredi : 19h - 20h30</li>
-                    <li>
-                        <a href="{{ route('donation') }}" class="{{ request()->routeIs('donation') ? 'active' : '' }}">
-                            <i class='bx bx-donate-heart'></i> Faire un don
-                        </a>
-                    </li>
                 </ul>
             </div>
-            <div class="footer-widget">
+            <!-- <div class="footer-widget">
                 <h4><i class='bx bx-news'></i> Newsletter</h4>
                 <form class="newsletter-form" action="#" method="POST">
                     <input type="email" name="email" placeholder="Votre email" required>
                     <button type="submit" aria-label="S'inscrire"><i class='bx bx-send'></i></button>
                 </form>
-            </div>
+            </div> -->
             <div class="footer-widget">
                 <h4><i class='bx bx-share-alt'></i> Suivez-nous</h4>
                 <div class="footer-social">
@@ -41,14 +36,23 @@
         <nav class="footer-nav" aria-label="Liens secondaires">
             <ul>
                 <li><a href="{{ route('home') }}"><i class='bx bx-home'></i> Accueil</a></li>
-                <li><a href="https://mouvementreveilmethodiste.over-blog.com/tag/enseignement/"><i class='bx bxs-graduation'></i> Enseignements</a></li>
-                <li><a href="https://mouvementreveilmethodiste.over-blog.com/2019/11/meditation.html"><i class='bx bx-book-open'></i> Méditation</a></li>
+                <li><a href="{{ route('events.index') }}"><i class='bx bx-book-open'></i> Agenda</a></li>
+                <li><a href="{{ route('login') }}"><i class='bx bx-log-in'></i> Connexion</a></li>
                 <!-- <li><li><a href="{{ route('multimedia.index') }}"><i class='bx bx-play-circle'></i> Multimédia</a></li></li> -->
+            </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Liens secondaires">
+            <ul>
+                <li><a href="{{ route('multimedia.index') }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
+                <li><a href="{{ route('prayers.index') }}"><i class='bx bx-church'></i> Prière</a></li>
+                <li><a href="{{ route('register') }}"><i class='bx bx-user-plus'></i> Rejoindre</a></li>
+                <li><a href="{{ route('testimonies.index') }}"><i class='bx bx-chat'></i> Témoignages</a></li>
+                <li><a href="{{ route('donation') }}"><i class='bx bx-donate-heart'></i> Faire un don</a></li>
             </ul>
         </nav>
         <div class="footer-contact">
             <p>
-                <i class='bx bx-map'></i> 123 Rue de la Paix, 75000 Paris<br>
+                <i class='bx bx-map'></i> 220 Logements; Yopougon Horeb; Adjamé-Ebenezer<br>
                 <i class='bx bx-envelope'></i> <a href="mailto:contact@espoirlumiere.fr">contact@espoirlumiere.fr</a><br>
                 <i class='bx bx-phone'></i> 01 23 45 67 89
             </p>
@@ -156,9 +160,14 @@
     .footer-credits {
         margin-top: 8px;
         font-size: 0.98rem;
-        color: #ffe066;
+        color: #e0e0e0;
         text-align: center;
         line-height: 1.6;
+    }
+    .footer-credits a {
+        color: #ffe066;
+        text-decoration: none;
+        transition: color 0.2s;
     }
     .footer-link {
         color: rgba(249, 249, 249, 0.55);

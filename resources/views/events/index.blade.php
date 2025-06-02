@@ -16,7 +16,7 @@
 
 
 
-  <table class="min-w-full bg-white mt-4">
+  <table class="agenda-table min-w-full bg-white mt-4">
     <thead>
       <tr>
         <th class="px-4 py-2">Titre</th>
@@ -57,4 +57,13 @@
     </tbody>
   </table>
 </div>
+<style>
+  .agenda-table tbody tr {
+    transition: transform 0.2s ease-in-out;
+  }
+  .agenda-table tbody tr:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s ease-in-out;
+  }
+</style>
 @endsection

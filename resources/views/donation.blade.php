@@ -26,16 +26,22 @@
             </div>
 
             <button class="don-btn" onclick="processDonation()">Faire un don</button>
+
+            <ul class="payment-methods">
+                <li><img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" /></li>
+                <li><img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" /></li>
+                <li><img src="https://img.icons8.com/fluency/48/000000/phone.png" alt="Mobile Money" /></li>
+            </ul>
         </div>
 
-        <div class="yas-container">
+        <!-- <div class="yas-container">
             <h4>Moyens de Paiement Disponibles</h4>
             <ul class="payment-methods">
                 <li><img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" /> Carte Bancaire</li>
                 <li><img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" /> Mastercard</li>
                 <li><img src="https://img.icons8.com/fluency/48/000000/phone.png" alt="Mobile Money" /> Mobile Money</li>
             </ul>
-        </div>
+        </div> -->
 
         <div class="don-animation">
             <div class="coin"></div>
@@ -54,7 +60,7 @@
         }
 
         .don-container {
-            background-color: #fff;
+            background-color: var(--accent-color);
             padding: 40px;
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -107,7 +113,7 @@
 
         .amount-btn:hover,
         .amount-btn.active {
-            background-color: #3498db;
+            background-color: var(--primary-color);
             color: white;
         }
 
@@ -125,7 +131,7 @@
 
         .don-btn {
             margin-top: 25px;
-            background: #2ecc71;
+            background: var(--primary-color);
             color: white;
             padding: 14px 28px;
             border: none;
@@ -136,7 +142,7 @@
         }
 
         .don-btn:hover {
-            background: #27ae60;
+            background: var(--secondary-color);
         }
 
         @media (max-width: 500px) {
@@ -156,7 +162,6 @@
             padding: 48px;
             width: 400px;
             box-shadow: 5px 0 0 0 rgba(204, 204, 204, 0.3), -5px 0 0 0 rgba(204, 204, 204, 0.3), 0 5px 0 0 rgba(204, 204, 204, 0.3);
-            font-family: 'Poppins', sans-serif;
             right: 50px;
             top: 180px;
         }
@@ -171,7 +176,12 @@
         .payment-methods {
             list-style: none;
             padding: 0;
-            margin-top: 30px;
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
         }
 
         .payment-methods li {
