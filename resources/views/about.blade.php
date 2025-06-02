@@ -12,7 +12,7 @@
 <body>
     @include('partials.header')
     <main>
-        <section class="container">
+        <section class="container-lg">
             <h2 class="font-bold text-center">
                 HISTORIQUE
             </h2>
@@ -27,7 +27,7 @@
                 </p>
             </div>
         </section>
-        <section class="container p-3 bg-white shadow-lg rounded-xl my-5 mx-auto items-center">
+        <section class="container-lg p-3 bg-white shadow-lg rounded-xl my-5 mx-auto items-center">
             <h2 class="font-bold text-center">PRÉSENTATION</h2>
             <div>
                 <p class="fontb">Pour une meilleure exécution du cahier de charges, le Mouvement de Réveil au plan National se dote des structures suivantes :</p><br>
