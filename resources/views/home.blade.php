@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.global-style')
     <title>Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     @include('partials.header')
@@ -51,75 +53,27 @@
                     <div class="col-md-4">
                         <div class="card h-100 text-center shadow-sm">
                             <div class="card-body">
+                                <i class="fas fa-cross icon-lg mb-3"></i>
+                                <h5 class="card-title font-bold">Foi</h5>
+                                <p class="card-text">Nous croyons que la foi en Jésus-Christ est le fondement de toute transformation intérieure et de notre marche spirituelle.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-people-fill icon-lg text-warning mb-2"></i>
+                                <h5 class="card-title font-bold">Fraternité</h5>
+                                <p class="card-text">Nous cultivons l’amour fraternel, le soutien mutuel et l’unité au sein de notre communauté.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
                                 <i class="bi bi-heart-fill icon-lg text-danger mb-2"></i>
-                                <h5 class="card-title font-bold">Amour</h5>
-                                <p class="card-text">Nous croyons que l'amour de Dieu transforme les vies et unit notre communauté.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="bi bi-people-fill icon-lg text-primary mb-2"></i>
-                                <h5 class="card-title font-bold">Partage</h5>
-                                <p class="card-text">Le partage et la solidarité sont au cœur de nos actions et de notre mission.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="bi bi-lightbulb-fill icon-lg text-warning mb-2"></i>
-                                <h5 class="card-title font-bold">Espérance</h5>
-                                <p class="card-text">Nous portons un message d'espérance pour tous, quels que soient les défis.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Events Section with Accordion -->
-        <section id="events" class="py-5 fontb">
-            <div class="container">
-                <h2 class="text-center mb-4 font-bold">Nos prochains événements</h2>
-                <div class="accordion" id="eventsAccordion">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#event1" aria-expanded="true">
-                                Culte du dimanche
-                            </button>
-                        </h2>
-                        <div id="event1" class="accordion-collapse collapse show" data-bs-parent="#eventsAccordion">
-                            <div class="accordion-body">
-                                Chaque dimanche à 10h00. Venez vivre un temps de louange et d'enseignement.
-                                <span class="badge bg-primary ms-2">Dimanche</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#event2">
-                                Groupe de prière
-                            </button>
-                        </h2>
-                        <div id="event2" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                            <div class="accordion-body">
-                                Rejoignez notre groupe de prière chaque mercredi à 19h00.
-                                <span class="badge bg-success ms-2">Mercredi</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#event3">
-                                Atelier jeunesse
-                            </button>
-                        </h2>
-                        <div id="event3" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                            <div class="accordion-body">
-                                Des activités pour les jeunes chaque samedi après-midi.
-                                <span class="badge bg-warning text-dark ms-2">Samedi</span>
+                                <h5 class="card-title font-bold">Engagement</h5>
+                                <p class="card-text">Nous nous investissons activement au service de Dieu et de l'Église, en mettant nos dons et talents au profit de la mission.</p>
                             </div>
                         </div>
                     </div>
@@ -130,35 +84,35 @@
         <!-- Latest Sermons Widget as Cards -->
         <section class="sermons-section py-5 bg-light fontb">
             <div class="container">
-                <h2 class="text-center mb-4 font-bold">Derniers messages</h2>
+                <h2 class="text-center mb-4 font-bold">Découvrez !</h2>
                 <div class="row g-4">
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">
                             <div class="card-body">
-                                <h6 class="text-primary">La foi qui déplace les montagnes</h6>
-                                <p class="small text-muted mb-1">Pasteur Jean, 12 mai 2025</p>
-                                <p>Découvrez comment la foi peut transformer votre vie quotidienne.</p>
-                                <a href="#" class="btn btn-link p-0">Écouter</a>
+                                <h6 class="text-primary font-bold">Le mur de prières</h6>
+                                <p class="small text-muted mb-1">Une intention, mille cœurs unis.</p>
+                                <p>Déposez vos intentions et rejoignez une communauté unie dans la prière et l’espérance.</p>
+                                <a href="/prayers" class="btn btn-link p-0">Voir</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">
                             <div class="card-body">
-                                <h6 class="text-primary">Vivre dans la paix</h6>
-                                <p class="small text-muted mb-1">Pasteure Marie, 5 mai 2025</p>
-                                <p>Un message inspirant sur la paix intérieure et la confiance en Dieu.</p>
-                                <a href="#" class="btn btn-link p-0">Écouter</a>
+                                <h6 class="text-primary font-bold">Des témoignages impactants</h6>
+                                <p class="small text-muted mb-1"> Chaque voix raconte un chemin de foi.</p>
+                                <p>Partagez votre histoire et inspirez une communauté en quête de paix et d’espérance</p>
+                                <a href="/testimonies" class="btn btn-link p-0">Voir</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">
                             <div class="card-body">
-                                <h6 class="text-primary">L'espérance au quotidien</h6>
-                                <p class="small text-muted mb-1">Pasteur Paul, 28 avril 2025</p>
-                                <p>Comment garder l'espérance dans les moments difficiles.</p>
-                                <a href="#" class="btn btn-link p-0">Écouter</a>
+                                <h6 class="text-primary font-bold">Les dernières vidéos édifiantes</h6>
+                                <p class="small text-muted mb-1">Des messages qui changent des vies.</p>
+                                <p>Découvrez comment garder l’espérance dans les moments difficiles.</p>
+                                <a href="/multimedia" class="btn btn-link p-0">Voir</a>
                             </div>
                         </div>
                     </div>
