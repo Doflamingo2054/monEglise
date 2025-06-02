@@ -33,46 +33,59 @@
                 <p class="fontb">Pour une meilleure exécution du cahier de charges, le Mouvement de Réveil au plan National se dote des structures suivantes :</p><br>
                 <div class="flex flex-wrap justify-center gap-4">
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
-                        <i class="bx bx-desk"></i> 
+                        <i class="bx bx-file text-center"></i> 
                         <p class="p-1">Le secrétariat</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-music text-center"></i>
                         <p class="p-1">La cellule louange</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-cog text-center"></i>
                         <p class="p-1">La cellule organisation</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-plus-circle text-center"></i>
                         <p class="p-1">La cellule de cure d’âme</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-target-lock text-center"></i>
                         <p class="p-1">La cellule de délivrance</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-heart-circle text-center"></i>
                         <p class="p-1">La cellule d'intercession</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-dumbbell text-center"></i>
                         <p class="p-1">La cellule affermissement</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-chat text-center"></i>
                         <p class="p-1">La cellule de communication</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-help-circle text-center"></i>
                         <p class="p-1"li>La cellule de la relation d’aide</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-shield-plus text-center"></i>
                         <p class="p-1"li>La cellule des commandos</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-compass text-center"></i>
                         <p class="p-1"li>La cellule de suivi des âme</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-badge-check text-center"></i>
                         <p class="p-1"li>La cellule formation et évaluation</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-wallet text-center"></i>
                         <p class="p-1"li>La cellule trésorerie et assistance social</p>
                     </div>
                     <div class="card sermon-card h-100 shadow-sm p-2 bg-white rounded-lg transition-transform transform hover:scale-105 hover:shadow-lg">
+                        <i class="bx bx-star text-center"></i>
                         <p class="p-1"li>La cellule gestion des talents et dons spirituels</p>
                     </div>
                 </div>
