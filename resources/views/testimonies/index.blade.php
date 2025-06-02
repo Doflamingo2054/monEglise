@@ -18,45 +18,45 @@
           <div class="mt-2 text-gray-800">
             {{ $testimony->content }}
           </div>
-        </div>
+          {{-- Bloc AJAX & commentaires --}}
+          <div class="post mt-4" data-id="{{ $testimony->id }}" data-type="testimony">
+            <div class="bg-gray-50 rounded shadow p-4">
+              <h3 class="font-semibold mb-2">Commentaires</h3>
 
-        {{-- Bloc AJAX & commentaires --}}
-        <div class="post" data-id="{{ $testimony->id }}" data-type="testimony">
-          <div class="bg-gray-50 rounded shadow p-4">
-            <h3 class="font-semibold mb-2">Commentaires</h3>
-
-            <div class="comments" id="comments-{{ $testimony->id }}">
-              @forelse($testimony->comments as $comment)
-                <div class="comment flex justify-between items-start py-2" data-id="{{ $comment->id }}">
-                  <div>
-                    <strong>{{ $comment->user->name }}</strong> : {{ $comment->content }}
+              <div class="comments" id="comments-{{ $testimony->id }}">
+                @forelse($testimony->comments as $comment)
+                  <div class="comment flex justify-between items-start py-2" data-id="{{ $comment->id }}">
+                    <div>
+                      <strong>{{ $comment->user->name }}</strong> : {{ $comment->content }}
+                    </div>
+                    @can('delete', $comment)
+                      <button class="text-red-500 btn-delete-comment" data-id="{{ $comment->id }}">×</button>
+                    @endcan
                   </div>
-                  @can('delete', $comment)
-                    <button class="text-red-500 btn-delete-comment" data-id="{{ $comment->id }}">×</button>
-                  @endcan
-                </div>
-              @empty
-                <p class="text-sm text-gray-600">Pas encore de commentaires.</p>
-              @endforelse
-            </div>
-
-            @auth
-              <div class="mt-4 flex space-x-2">
-                <textarea
-                  class="new-comment flex-1 border rounded px-2 py-1"
-                  placeholder="Écrire un commentaire…"
-                  rows="2"
-                ></textarea>
-                  <button
-                    class="btn-add-comment transform hover:scale-105 hover:shadow-lg hover:bg-[#0d8e67] transition duration-300"
-                    style="background-color:#0c6e4f; padding:.5rem 1rem; color:white; border-radius:.25rem;"
-                  >
-                    Commenter
-                  </button>
+                @empty
+                  <p class="text-sm text-gray-600">Pas encore de commentaires.</p>
+                @endforelse
               </div>
-            @endauth
+
+              @auth
+                <div class="mt-4 flex space-x-2">
+                  <textarea
+                    class="new-comment flex-1 border rounded px-2 py-1"
+                    placeholder="Écrire un commentaire…"
+                    rows="2"
+                  ></textarea>
+                    <button
+                      class="btn-add-comment transform hover:scale-105 hover:shadow-lg hover:bg-[#0d8e67] transition duration-300"
+                      style="background-color:var(--primary-color); padding:.5rem 1rem; color:white; border-radius:.25rem;"
+                    >
+                      Commenter
+                    </button>
+                </div>
+              @endauth
+            </div>
           </div>
         </div>
+
       @endforeach
     </div>
   @endif
