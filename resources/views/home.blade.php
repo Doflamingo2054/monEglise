@@ -24,11 +24,11 @@
                     <img src="{{ asset('faith.jpg') }}" alt="Église" class="img-fluid rounded shadow-lg">
                 </div>
                 <div class="col-md-6">
-                    <h2 class="font-bold py-3 mb-5 fonth">Qui sommes-nous ?</h2>
+                    <h2 class="font-bold py-3 mb-2 fonth">Qui sommes-nous ?</h2>
                     <p class="px-4 text-justify fontb">
-                        Le Mouvement de Réveil Méthodiste est un groupe de prière fervent qui cherche à intensifier sa mission à travers la prière, l’enseignement et la sanctification.
+                        Le Mouvement de Réveil émane de la volonté profonde de l’Eglise. Sa tâche première est de répondre aux aspirations des fidèles en quête d’une relation personnelle avec le Christ. Le réveil est propre à l’Eglise Méthodiste depuis sa création. Comme toute institution, le réveil sera progressivement délaissé au profit de l’institutionnalisation.
                     </p>
-                    <a href="/about" class="btn-outline-custom mt-5 font-bold mx-2">Découvrir notre histoire</a>
+                    <a href="/about" class="btn-outline-custom mt-3 font-bold mx-2">Découvrir notre histoire</a>
                 </div>
             </div>
         </section>
