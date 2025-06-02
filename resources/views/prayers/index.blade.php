@@ -11,7 +11,7 @@
 <body>
   @include('partials.header')
   <main class="container-lg">
-    <h1 class="text-2xl font-bold mb-4">Mur des prières</h1>
+    <h1 class="text-2xl font-bold mb-4">Mur de prières</h1>
 
     @if($prayers->isEmpty())
       <p>Aucune prière publiée pour l’instant.</p>
