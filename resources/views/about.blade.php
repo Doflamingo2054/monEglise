@@ -23,6 +23,30 @@
                 <p>Plusieurs pasteurs se sont succédé, <strong>les Révérends DIARRAH, NDE Moïse, Isaac AKA, GBATTE Koudou et dépuis Octobre 2013 , l'Aumonier est le Rev Pasteur BECKEN KOKOBE</strong>.</p><br>
             </div>
         </section>
+        <section class="container">
+            <h2 class="font-bold">PRÉSENTATION</h2>
+            <div class="fontb">
+                <p>Pour une meilleure exécution du cahier de charges, le Mouvement de Réveil au plan National se dote des structures suivantes :</p><br>
+                <ul class="list-disc pl-5 text-gray-700 space-y-2 px-5">
+                    <li>Le secrétariat</li>
+                    <li>La cellule de communication</li>
+                    <li>La cellule d'intercession</li>
+                    <li>La cellule de délivrance</li>
+                    <li>La cellule de cure d’âme</li>
+                    <li>La cellule de la relation d’aide</li>
+                    <li>La cellule affermissement</li>
+                    <li>La cellule gestion des talents et dons spirituels</li>
+                    <li>La cellule formation et évaluation</li>
+                    <li>La cellule des commandos</li>
+                    <li>La cellule louange</li>
+                    <li>La cellule organisation</li>
+                    <li>La cellule trésorerie et assistance social</li>
+                    <li>La cellule de suivi des âme</li>
+                </ul> 
+                <br>
+                <p>Ces différentes structures doivent permettre à chaque fidèle méthodiste d’aimer son église et de trouver ce dont il a besoin pour son épanouissement spirituel au sein de son église.</p>
+            </div>
+        </section>
     </main>
 
     @include('partials.footer')
