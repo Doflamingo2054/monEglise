@@ -37,7 +37,6 @@
             <ul>
                 <li><a href="{{ route('home') }}"><i class='bx bx-home'></i> Accueil</a></li>
                 <li><a href="{{ route('events.index') }}"><i class='bx bx-book-open'></i> Agenda</a></li>
-                <li><a href="{{ route('login') }}"><i class='bx bx-log-in'></i> Connexion</a></li>
                 <!-- <li><li><a href="{{ route('multimedia.index') }}"><i class='bx bx-play-circle'></i> Multimédia</a></li></li> -->
             </ul>
         </nav>
@@ -45,7 +44,6 @@
             <ul>
                 <li><a href="{{ route('multimedia.index') }}"><i class='bx bx-play-circle'></i> Multimédia</a></li>
                 <li><a href="{{ route('prayers.index') }}"><i class='bx bx-church'></i> Prière</a></li>
-                <li><a href="{{ route('register') }}"><i class='bx bx-user-plus'></i> Rejoindre</a></li>
                 <li><a href="{{ route('testimonies.index') }}"><i class='bx bx-chat'></i> Témoignages</a></li>
                 <li><a href="{{ route('donation') }}"><i class='bx bx-donate-heart'></i> Faire un don</a></li>
             </ul>

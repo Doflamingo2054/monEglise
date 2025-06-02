@@ -13,7 +13,8 @@
         --accent-color: #10B981;        /* Vert émeraude */
 
         /* Couleurs de fond et de texte */
-        --background-color: #FFFFFF;    /* Blanc */
+        --background-color: #FFFFFF;    /* Blanc */ /* Vert foncé */
+        --primary-color-hover: #7C6FD1; /* Version plus claire de #493BA2 */
         --text-color: #1F2937;          /* Gris foncé */
         --muted-text-color: #6B7280;    /* Gris moyen */
 

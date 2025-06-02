@@ -8,17 +8,27 @@
 </head>
 <body>
     @include('partials.header')
-    <main class="container-lg">
+    <main class="" style="padding-top: 0">
+        <section class="hero-banner py-4 md:py-[40px]">
+            <div class="hero-content container-lg" style="position: relative; z-index: 1;">
+                <p class="hero-text">
+                    Le Mouvement de Réveil émane de la volonté profonde de l’Eglise. Sa tâche première est de répondre aux aspirations des fidèles en quête d’une relation personnelle avec le Christ. Le réveil est propre à l’Eglise Méthodiste depuis sa création. Comme toute institution, le réveil sera progressivement délaissé au profit de l’institutionnalisation.
+                </p>
+                <div class="">
+                    <a class="btn btn-primary hero-btn" href="/about">Découvrir notre histoire</a>
+                </div>
+            </div>
+        </section>
         <!-- Alert Widget -->
-        <div class="container mb-4">
+        <!-- <div class="container mb-4">
             <div class="alert alert-info alert-dismissible fade show" role="alert">
                 <strong>Nouveau :</strong> Retrouvez nos rencontres en ligne chaque dimanche après le culte !
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
             </div>
-        </div>
+        </div> -->
 
         <!-- About Section -->
-        <section id="about" class="container my-5">
+        <!-- <section id="about" class="container my-5">
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <img src="{{ asset('faith.jpg') }}" alt="Église" class="img-fluid rounded shadow-lg">
@@ -31,7 +41,7 @@
                     <a href="/about" class="btn-outline-custom mt-3 font-bold mx-2">Découvrir notre histoire</a>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Values Widget as Cards -->
         <section class="values-section py-5 bg-light fontb">
@@ -161,6 +171,50 @@
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('images/hero-bg.jpg') }}') center/cover no-repeat;
         }
+        .hero-banner {
+            background: url('{{ asset('faith.jpg') }}') center/cover no-repeat;
+            position: relative;
+        }
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 80px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 100%);
+            pointer-events: none;
+            z-index: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hero-text {
+            width: 100%;
+            max-width: 600px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .hero-content {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px
+        }
+        .hero-btn {
+            background-color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            border: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 0.5rem;
+            display: inline-block;
+            z-index: 2;
+        }
+        .hero-btn:hover {
+            background-color: var(--primary-color-hover);
+            transform: scale(1.05);
+        }
         .icon-lg {
             font-size: 2.5rem;
         }
@@ -182,6 +236,9 @@
         @media (max-width: 767px) {
             .carousel-item {
                 min-height: 200px;
+            }
+            .hero-content {
+                min-height: unset;
             }
         }
     </style>

@@ -52,7 +52,7 @@
                     rows="2"></textarea>
                   <button
                     class="btn-add-comment transform hover:scale-105 hover:shadow-lg hover:bg-[#0d8e67] transition duration-300"
-                    style="background-color:#0c6e4f; padding:.5rem 1rem; color:white; border-radius:.25rem;"
+                    style="background-color:var(--primary-color); padding:.5rem 1rem; color:white; border-radius:.25rem;"
                   >
                     Commenter
                   </button>
