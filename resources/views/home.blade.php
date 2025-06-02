@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.global-style')
     <title>Accueil</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
     @include('partials.header')
@@ -41,27 +43,27 @@
                     <div class="col-md-4">
                         <div class="card h-100 text-center shadow-sm">
                             <div class="card-body">
+                                <i class="fas fa-cross icon-lg mb-3"></i>
+                                <h5 class="card-title font-bold">Foi</h5>
+                                <p class="card-text">Nous croyons que la foi en Jésus-Christ est le fondement de toute transformation intérieure et de notre marche spirituelle.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="bi bi-people-fill icon-lg text-warning mb-2"></i>
+                                <h5 class="card-title font-bold">Fraternité</h5>
+                                <p class="card-text">Nous cultivons l’amour fraternel, le soutien mutuel et l’unité au sein de notre communauté.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center shadow-sm">
+                            <div class="card-body">
                                 <i class="bi bi-heart-fill icon-lg text-danger mb-2"></i>
-                                <h5 class="card-title font-bold">Amour</h5>
-                                <p class="card-text">Nous croyons que l'amour de Dieu transforme les vies et unit notre communauté.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="bi bi-people-fill icon-lg text-primary mb-2"></i>
-                                <h5 class="card-title font-bold">Partage</h5>
-                                <p class="card-text">Le partage et la solidarité sont au cœur de nos actions et de notre mission.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card h-100 text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="bi bi-lightbulb-fill icon-lg text-warning mb-2"></i>
-                                <h5 class="card-title font-bold">Espérance</h5>
-                                <p class="card-text">Nous portons un message d'espérance pour tous, quels que soient les défis.</p>
+                                <h5 class="card-title font-bold">Engagement</h5>
+                                <p class="card-text">Nous nous investissons activement au service de Dieu et de l'Église, en mettant nos dons et talents au profit de la mission.</p>
                             </div>
                         </div>
                     </div>
@@ -77,7 +79,7 @@
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">
                             <div class="card-body">
-                                <h6 class="text-primary">Le mur de prières</h6>
+                                <h6 class="text-primary font-bold">Le mur de prières</h6>
                                 <p class="small text-muted mb-1">Une intention, mille cœurs unis.</p>
                                 <p>Déposez vos intentions et rejoignez une communauté unie dans la prière et l’espérance.</p>
                                 <a href="/prayers" class="btn btn-link p-0">Voir</a>
@@ -87,7 +89,7 @@
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">
                             <div class="card-body">
-                                <h6 class="text-primary">Des témoignages impactants</h6>
+                                <h6 class="text-primary font-bold">Des témoignages impactants</h6>
                                 <p class="small text-muted mb-1"> Chaque voix raconte un chemin de foi.</p>
                                 <p>Partagez votre histoire et inspirez une communauté en quête de paix et d’espérance</p>
                                 <a href="/testimonies" class="btn btn-link p-0">Voir</a>
@@ -97,7 +99,7 @@
                     <div class="col-md-4">
                         <div class="card sermon-card h-100 shadow-sm">
                             <div class="card-body">
-                                <h6 class="text-primary">Les dernières vidéos édifiantes</h6>
+                                <h6 class="text-primary font-bold">Les dernières vidéos édifiantes</h6>
                                 <p class="small text-muted mb-1">Des messages qui changent des vies.</p>
                                 <p>Découvrez comment garder l’espérance dans les moments difficiles.</p>
                                 <a href="/multimedia" class="btn btn-link p-0">Voir</a>
