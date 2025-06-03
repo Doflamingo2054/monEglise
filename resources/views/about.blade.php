@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.global-style')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>About</title>
+    <title>Mouvement de reveil méthodiste - À Propos</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
                 </p>
             </div>
         </section>
-        <section class="container-lg p-3 bg-white shadow-lg rounded-xl my-5 mx-auto items-center">
+        <section class="container-lg my-5 mx-auto items-center">
             <h2 class="font-bold text-center">PRÉSENTATION</h2>
             <div>
                 <p class="fontb">Pour une meilleure exécution du cahier de charges, le Mouvement de Réveil au plan National se dote des structures suivantes :</p><br>

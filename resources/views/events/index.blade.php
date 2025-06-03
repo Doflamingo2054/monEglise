@@ -59,11 +59,12 @@
 </div>
 <style>
   .agenda-table tbody tr {
-    transition: transform 0.2s ease-in-out;
+    transition: background-color 0.3s ease;
   }
   .agenda-table tbody tr:hover {
-    transform: scale(1.02);
-    transition: transform 0.2s ease-in-out;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s ease;
   }
 </style>
 @endsection

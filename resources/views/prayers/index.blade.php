@@ -6,7 +6,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
   @include('partials.global-style')
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-  <title>Priere</title>
+  <title>Mouvement de reveil méthodiste - Prières</title>
 </head>
 <body>
   @include('partials.header')

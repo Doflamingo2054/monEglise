@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.global-style')
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <title>Multimédia</title>
+    <title>Mouvement de reveil méthodiste - Multimédia</title>
 </head>
 <body>
     @include('partials.header')

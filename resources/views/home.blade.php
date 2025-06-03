@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.global-style')
-    <title>Accueil</title>
-    
-
+    <title>Mouvement de reveil méthodiste</title>
 </head>
 <body>
     @include('partials.header')
@@ -164,6 +162,7 @@
             margin-top: 0.5rem;
             display: inline-block;
             z-index: 2;
+            font-weight: bold;
         }
         .hero-btn:hover {
             background-color: var(--primary-color-hover);

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('partials.global-style')
-    <title>Accueil</title>
+    <title>Mouvement de reveil méthodiste - Faire un don</title>
 </head>
 
 <body>

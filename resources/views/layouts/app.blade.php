@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ config('app.name', 'Laravel') }}</title>
+  <title>Mouvement de reveil méthodiste</title>
 
   <!-- CSS compilé -->
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">

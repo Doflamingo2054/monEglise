@@ -1,3 +1,11 @@
+<link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+<meta name="description" content="Rejoignez le Mouvement de Réveil pour vivre une foi authentique, découvrir des témoignages inspirants, prier en communauté et accéder à des ressources chrétiennes édifiantes." />
+<meta name="keywords" content="Église Méthodiste, Réveil spirituel, Foi chrétienne, Témoignages chrétiens, Prière en ligne, Multimédia chrétien, Mur de prière, Missionnaires de Réveil, Église Côte d'Ivoire, Mouvement de Réveil" />
+<meta name="author" content="THEA Guy Roger, YAO Kossia Bénédicte, N'DOLI Yasmine, KOUAO Amah Esther, GODJAN Koutouan Lucien, SANOGO Zoumana, KUSI Appiah" />
+<meta property="og:title" content="Mouvement de Réveil - Une foi vivante et partagée" />
+<meta property="og:description" content="Vivez le Réveil avec une communauté unie par la foi. Prières, témoignages, vidéos et événements pour nourrir votre marche spirituelle." />
+<meta property="og:image" content="{{ asset('faith.jpg') }}" />
+<meta property="og:type" content="website" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
