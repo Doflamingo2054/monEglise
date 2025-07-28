@@ -7,7 +7,7 @@ Membres de l'équipe :
 - YAO Kossia Bénédicte
 - N'DOLI Yasmeen
 - KOUAO Amah Esther
-- GODJAN Koutouan Lucien
+- GODJAN Koutoua Lucien
 - SANOGO Zoumana
 - KUSI Appiah
 
